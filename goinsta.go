@@ -112,8 +112,14 @@ func (inst *Instagram) init() {
 	inst.Timeline = newTimeline(inst)
 	inst.Search = newSearch(inst)
 	inst.Inbox = newInbox(inst)
-	inst.Feed = newFeed(inst)
+	inst.Feed = newFeed(inst)s
 	inst.Contacts = newContacts(inst)
+}
+
+// SetTransport sets a custom transport
+func (inst *Instagram) SetTransport(myTransport *http.Transport) error {
+	inst.c.Transport = myTransport
+	return nil
 }
 
 // SetProxy sets proxy for connection.
