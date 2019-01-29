@@ -112,7 +112,7 @@ func (inst *Instagram) init() {
 	inst.Timeline = newTimeline(inst)
 	inst.Search = newSearch(inst)
 	inst.Inbox = newInbox(inst)
-	inst.Feed = newFeed(inst)s
+	inst.Feed = newFeed(inst)
 	inst.Contacts = newContacts(inst)
 }
 
